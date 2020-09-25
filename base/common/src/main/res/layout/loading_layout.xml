@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolxtc.common.coustomview.refreshLayout.LoadingLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loading_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/loading_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_width="@dimen/dp_160"
+            android:layout_height="@dimen/dp_194"
+            android:indeterminateDrawable="@drawable/common_loading" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5"
+            android:text="@string/loading"
+            android:textColor="@color/c999999"
+            android:textSize="@dimen/sp_15"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading_failed_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/loading_failed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_20"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="@dimen/dp_6"
+            android:paddingLeft="@dimen/dp_40"
+            android:paddingRight="@dimen/dp_40"
+            android:text="@string/load_failed"
+            android:textColor="@color/c666666"
+            android:textSize="@dimen/sp_14"
+            app:drawableTopCompat="@mipmap/ic_no_data_bg" />
+
+        <TextView
+            android:id="@+id/loading_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@drawable/drawable_cf6f7f8_r69_hollow"
+            android:drawablePadding="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@string/refresh"
+            android:textColor="@color/c666666"
+            android:textSize="@dimen/sp_18"
+            app:drawableLeftCompat="@mipmap/ic_no_data_refresh" />
+
+        <Button
+            android:id="@+id/loading_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:background="@drawable/drawable_primary_r22"
+            android:minWidth="@dimen/dp_168"
+            android:text=""
+            android:textColor="@color/c333333"
+            android:textSize="@dimen/sp_16"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</com.coolxtc.common.coustomview.refreshLayout.LoadingLayout>

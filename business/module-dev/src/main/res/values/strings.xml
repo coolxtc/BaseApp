@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dev_event_bt">Test-Event</string>
+    <string name="dev_router_bt_1">Test-Router-1</string>
+    <string name="dev_router_bt_2">Test-Router-2</string>
+</resources>

@@ -1,0 +1,8 @@
+include 'base:common'
+include ':app'
+include 'business:module-index'
+include 'business:module-answer'
+include 'business:module-dev'
+include ':business:module-answer-interface'
+include ':business:module-dev-interface'
+include ':business:module-index-interface'

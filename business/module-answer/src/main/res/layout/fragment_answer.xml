@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dp_20">
+
+    <TextView
+        android:id="@+id/tv_position1"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/answer_title1"
+        android:textColor="@color/c333333"
+        app:layout_constraintBaseline_toBaselineOf="@id/et_position1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_position1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:autofillHints="@string/app_name"
+        android:hint="@string/answer_info1"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="@string/answer_info1"
+        app:layout_constraintLeft_toRightOf="@id/tv_position1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_position2"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:gravity="end"
+        android:text="@string/answer_title2"
+        android:textColor="@color/c333333"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_position1" />
+
+    <EditText
+        android:id="@+id/et_position2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:autofillHints="@string/app_name"
+        android:hint="@string/answer_info2"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="@string/answer_info2"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_position2"
+        app:layout_constraintLeft_toRightOf="@id/tv_position2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_position2" />
+
+    <TextView
+        android:id="@+id/tv_position3"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:gravity="end"
+        android:text="@string/answer_title3"
+        android:textColor="@color/c333333"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_position2" />
+
+    <EditText
+        android:id="@+id/et_position3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_30"
+        android:autofillHints="@string/app_name"
+        android:hint="@string/answer_info3"
+        android:inputType="text"
+        android:singleLine="true"
+        android:text="@string/answer_info3"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_position3"
+        app:layout_constraintLeft_toRightOf="@id/tv_position3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_position2" />
+
+    <Button
+        android:id="@+id/bt_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:text="@string/create"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/bt_copy"
+        app:layout_constraintTop_toBottomOf="@id/tv_position3" />
+
+    <Button
+        android:id="@+id/bt_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copy"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="@id/bt_create"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bt_create" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:layout_constraintTop_toBottomOf="@id/bt_create">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

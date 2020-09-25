@@ -1,0 +1,15 @@
+ext {
+    android = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "29.0.3",
+            applicationId    : "com.coolxtc.base",
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+            versionCode      : 1,
+            versionName      : "1.0.0"
+    ]
+
+    dependVersion = [
+            "arouterCompilerVersion": "1.2.2"
+    ]
+}

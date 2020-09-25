@@ -1,0 +1,79 @@
+if (isModule.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def config = rootProject.ext
+android {
+    compileSdkVersion config.android.compileSdkVersion
+    buildToolsVersion config.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.android.minSdkVersion
+        targetSdkVersion config.android.targetSdkVersion
+        versionCode config.android.versionCode
+        versionName config.android.versionName
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    signingConfigs {
+        myConfig {
+            keyAlias 'coolxtc'
+            keyPassword 'coolxtc123'
+            storeFile file("../../key.jks")
+            storePassword 'coolxtc123'
+            //现阶段渠道包需要关闭v2验证
+//            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        //调试版本
+        debug {
+            signingConfig signingConfigs.myConfig
+        }
+        //内部测试版本
+        alpha {
+            signingConfig signingConfigs.myConfig
+        }
+        release {
+            signingConfig signingConfigs.myConfig
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            if (isModule.toBoolean()) {
+                manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+//ARouter路由配置
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(':base:common')
+    //ARouter
+    kapt "com.alibaba:arouter-compiler:${config.dependVersion.arouterCompilerVersion}"
+}

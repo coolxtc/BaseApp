@@ -1,0 +1,1 @@
+-keep class com.coolxtc.index.bean.ret** {*;}

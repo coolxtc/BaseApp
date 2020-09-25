@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/c30000000"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_5">
+
+    <ImageView
+        android:id="@+id/content_view_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/content_view_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/content_view_image"
+        android:text="0%"
+        android:textColor="@color/white" />
+
+    <ProgressBar
+        android:id="@+id/content_view_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_view_image"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_10"
+        android:max="100"
+        android:maxHeight="@dimen/dp_8"
+        android:minHeight="@dimen/dp_5" />
+
+</RelativeLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_good"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_white_selector"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_12">
+
+        <ImageView
+            android:id="@+id/sdv_image"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginEnd="@dimen/dp_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="2dp"
+                android:lines="2"
+                android:maxLines="2"
+                android:text="@string/app_name"
+                android:textColor="@color/c151515"
+                android:textSize="@dimen/sp_13" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_save_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_9"
+                        android:background="@drawable/drawable_cffe7e4_r2"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp_5"
+                        android:paddingTop="@dimen/dp_3"
+                        android:paddingEnd="@dimen/dp_5"
+                        android:paddingBottom="@dimen/dp_3"
+                        android:text="存入金 +39.9"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sp_11" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="券后价￥"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_11" />
+
+                        <TextView
+                            android:id="@+id/tv_cost_price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="4999"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:id="@+id/tv_cost_price2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text=".99"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp_9"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_default_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="￥4999.99"
+                            android:textColor="@color/c999999"
+                            android:textSize="@dimen/sp_9" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp_0"
+                        android:paddingEnd="@dimen/dp_3"
+                        android:text="已售6053件"
+                        android:textColor="@color/c999999"
+                        android:textSize="@dimen/sp_11" />
+
+                    <TextView
+                        android:id="@+id/tv_coupon_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_26"
+                        android:layout_marginTop="@dimen/dp_4"
+                        android:background="@drawable/ic_coupon_bg"
+                        android:gravity="end|center_vertical"
+                        android:includeFontPadding="false"
+                        android:paddingStart="@dimen/dp_25"
+                        android:paddingEnd="@dimen/dp_10"
+                        android:text="1000元"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/line_horizontal" />
+</LinearLayout>

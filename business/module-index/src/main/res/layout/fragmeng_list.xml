@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.coolxtc.common.coustomview.refreshLayout.PullToRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_pull_to_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.coolxtc.common.coustomview.TypeSelectorLayout
+            android:id="@+id/layout_type_selector"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:background="@color/white" />
+
+        <View
+            android:id="@+id/line"
+            style="@style/line_horizontal"
+            android:layout_below="@id/layout_type_selector" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+        <include
+            layout="@layout/loading_layout"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</com.coolxtc.common.coustomview.refreshLayout.PullToRefreshLayout>
+

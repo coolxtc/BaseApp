@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF7000</color>
+    <color name="colorPrimaryDark">#333333</color>
+    <color name="colorAccent">#F17C67</color>
+    <color name="colorBackground">#F4F4F4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="cf7f7f7">#F7F7F7</color>
+    <color name="cf17c67">#F17C67</color>
+    <color name="cf6f7f8">#F6F7F8</color>
+    <color name="cff7000">#FF7000</color>
+    <color name="cdcdcdc">#DCDCDC</color>
+    <color name="c333333">#333333</color>
+    <color name="c666666">#666666</color>
+    <color name="c999999">#999999</color>
+    <color name="c545b63">#545B63</color>
+    <color name="c151515">#151515</color>
+    <color name="cffe7e4">#FFE7E4</color>
+    <color name="ccccccc">#CCCCCC</color>
+    <color name="caa000000">#AA000000</color>
+    <color name="c89000000">#89000000</color>
+    <color name="c1c000000">#1C000000</color>
+    <color name="c30000000">#30000000</color>
+
+</resources>
